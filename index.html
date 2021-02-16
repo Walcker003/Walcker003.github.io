@@ -1,0 +1,191 @@
+<!doctype html>
+    <html lang="it">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <title>Cerchi e archi</title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+            <style>
+            html, body { margin: 0; padding: 0; }
+            canvas { display: block; }
+        </style>
+    </head>
+        <body>
+            <script>
+function setup() {
+                    createCanvas(600, 600);
+                }
+                function draw() {
+                  background(210,210,210);
+                  //asse di simmetria
+                  stroke(0, 0, 0);
+                  strokeWeight(2);
+                  line(mouseX, mouseY-900, mouseX, mouseY+900);
+                  //testa
+                  fill(0, 127, 255);
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  triangle(mouseX, mouseY-18, mouseX+47, mouseY-80, mouseX-47, mouseY-80);
+                  //antenne
+                  //antenna destra
+                  fill(0, 127, 255);
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  triangle(mouseX+25, mouseY-95, mouseX+35, mouseY-80, mouseX+15, mouseY-80);
+                  stroke(0, 0, 0);
+                  strokeWeight(3);
+                  line(mouseX+25, mouseY-95, mouseX+25, mouseY-135);
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(4);
+                  circle(mouseX+25, mouseY-143, 10);
+                  //antenna sinistra
+                  fill(0, 127, 255);
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  triangle(mouseX-25, mouseY-95, mouseX-35, mouseY-80, mouseX-15, mouseY-80);
+                  stroke(0, 0, 0);
+                  strokeWeight(3);
+                  line(mouseX-25, mouseY-95, mouseX-25, mouseY-135);
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(4);
+                  circle(mouseX-25, mouseY-143, 10);
+                  //faccia
+                  //bocca
+                  fill(0, 0, 0);
+                  stroke(0, 0, 0);
+                  strokeWeight(1);
+                  rect(mouseX-15, mouseY-46, 30, 5);
+                  stroke(0, 127, 255);
+                  strokeWeight(2);
+                  line(mouseX-7, mouseY-46, mouseX-7, mouseY-41);
+                  line(mouseX-3, mouseY-46, mouseX-3, mouseY-41);
+                  line(mouseX+1, mouseY-46, mouseX+1, mouseY-41);
+                  line(mouseX+5, mouseY-46, mouseX+5, mouseY-41);
+                  line(mouseX+9, mouseY-46, mouseX+9, mouseY-41);
+                  //occhi
+                  //occhio destro
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(2);
+                  circle(mouseX+25, mouseY-65, 15);
+                  fill(0, 0, 0);
+                  stroke(0, 0, 0);
+                  strokeWeight(2);
+                  circle(mouseX+25, mouseY-66, 2);
+                  //occhio sinistro
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(2);
+                  circle(mouseX-25, mouseY-65, 15);
+                  fill(0, 0, 0);
+                  stroke(0, 0, 0);
+                  strokeWeight(2);
+                  circle(mouseX-25, mouseY-66, 2);
+                  //naso
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(2);
+                  circle(mouseX, mouseY-60, 15);
+                  //collo
+                  stroke(0, 127, 255);
+                  strokeWeight(2);
+                  line(mouseX, mouseY-16, mouseX, mouseY+2);
+                  line(mouseX-4, mouseY-13, mouseX+4, mouseY-13);
+                  line(mouseX-4, mouseY-9, mouseX+4, mouseY-9);
+                  line(mouseX-4, mouseY-5, mouseX+4, mouseY-5);
+                  line(mouseX-4, mouseY-1, mouseX+4, mouseY-1);
+                  //corpo
+                  //busto
+                  fill(0, 127, 255);
+                  stroke(0, 127, 255);
+                  strokeWeight(3)
+                  rect(mouseX-65, mouseY, 130, 130);
+                  //cravatta
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(3)
+                  triangle(mouseX, mouseY+15, mouseX+15, mouseY, mouseX-15, mouseY);
+                  quad(mouseX, mouseY+17, mouseX+25, mouseY+60, mouseX, mouseY+100, mouseX-25, mouseY+60);
+                  //braccia
+                  //braccio destro
+                  fill(0, 127, 255);
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  line(mouseX+65, mouseY+4, mouseX+70, mouseY+4);
+                  line(mouseX+65, mouseY+10, mouseX+70, mouseY+10);
+                  rect(mouseX+72, mouseY, 15, 15);
+                  rect(mouseX+85, mouseY, 25, 110);
+                  //mano destra
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  line(mouseX+95, mouseY+110, mouseX+95, mouseY+117);
+                  line(mouseX+101, mouseY+110, mouseX+101, mouseY+117);
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(3);
+                  circle(mouseX+99, mouseY+144, 50);
+                  //braccio sinistro
+                  fill(0, 127, 255);
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  line(mouseX-65, mouseY+4, mouseX-70, mouseY+4);
+                  line(mouseX-65, mouseY+10, mouseX-70, mouseY+10);
+                  rect(mouseX-87, mouseY, 15, 15);
+                  rect(mouseX-112, mouseY, 25, 110);
+                  //mano sinistra
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  line(mouseX-101, mouseY+110, mouseX-101, mouseY+117);
+                  line(mouseX-95, mouseY+110, mouseX-95, mouseY+117);
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(3);
+                  circle(mouseX-99, mouseY+144, 50);
+                  //gambe
+                  //gamba sinistra
+                  fill(0, 127, 255);
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  rect(mouseX-50, mouseY+130, 25, 130);
+                  //gamba destra
+                  fill(0, 127, 255);
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  rect(mouseX+25, mouseY+130, 25, 130);
+                  //rotelle
+                  //rotella sinistra
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(3);
+                  quad(mouseX-50, mouseY+260, mouseX-25, mouseY+260, mouseX-15, mouseY+275, mouseX-60, mouseY+275);
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  line(mouseX-38, mouseY+275, mouseX-38, mouseY+283);
+                  stroke(0, 0, 0);
+                  fill(0, 0, 0);
+                  circle(mouseX-38, mouseY+305, 40);
+                  fill(95, 95, 95);
+                  circle(mouseX-38, mouseY+305, 20);
+                  fill(0, 0, 0);
+                  circle(mouseX-38, mouseY+305, 2);
+                  //rotella destra
+                  fill(255, 0, 0);
+                  stroke(255, 0, 0);
+                  strokeWeight(3);
+                  quad(mouseX+24, mouseY+260, mouseX+50, mouseY+260, mouseX+60, mouseY+275, mouseX+15, mouseY+275);
+                  stroke(0, 127, 255);
+                  strokeWeight(3);
+                  line(mouseX+38, mouseY+275, mouseX+38, mouseY+283);
+                  stroke(0, 0, 0);
+                  fill(0, 0, 0);
+                  circle(mouseX+38, mouseY+305, 40);
+                  fill(95, 95, 95);
+                  circle(mouseX+38, mouseY+305, 20);
+                  fill(0, 0, 0);
+                  circle(mouseX+38, mouseY+305, 2);
+}
+            </script>
+        </body>
+}
