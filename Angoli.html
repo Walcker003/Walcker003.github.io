@@ -1,0 +1,189 @@
+<!doctype html>
+    <html lang="it">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <title>Cerchi e archi</title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+            <style>
+            html, body { margin: 0; padding: 0; }
+            canvas { display: block; }
+        </style>
+    </head>
+        <body>
+            <script>
+            function setup() {
+              angleMode(DEGREES);
+              createCanvas(540, 300);
+            }
+
+            function draw() {
+              background(220);
+              //testo per indicare che i cerchi hanno l'arco in senso orario
+              stroke(10, 10, 10);
+              strokeWeight(0.50);
+              text("Cerchi con arco in senso orario", 15, 20);
+              //cerchi con arco in senso orario
+              //cerchio con arco di 30°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(45, 90, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(45, 90, 50, 50, 0, 30);
+              //testo che indica i gradi dell'arco
+              text("30°", 37, 50);
+              //cerchio con arco di 45°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(120, 90, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(120, 90, 50, 50, 0, 45);
+              //testo che indica i gradi dell'arco
+              text("45°", 113, 50);
+              //cerchio con arco di 60°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(195, 90, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(195, 90, 50, 50, 0, 60);
+              //testo che indica i gradi dell'arco
+              text("60°", 189, 50);
+              //cerchio con arco di 90°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(270, 90, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(270, 90, 50, 50, 0, 90);
+              //testo che indica i gradi dell'arco
+              text("90°", 265, 50);
+              //cerchio con arco di 180°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(345, 90, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(345, 90, 50, 50, 0, 180);
+              //testo che indica i gradi dell'arco
+              text("180°", 333, 50);
+              //cerchio con arco di 270°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(420, 90, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(420, 90, 50, 50, 0, 270);
+              //testo che indica i gradi dell'arco
+              text("270°", 410, 50);
+              //cerchio con arco di 360°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(495, 90, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(495, 90, 50, 50, 0, 360);
+              //testo che indica i gradi dell'arco
+              text("360°", 485, 50);
+              //testo per indicare che i cerchi hanno l'arco in senso antiorario
+              stroke(10, 10, 10);
+              strokeWeight(0.50);
+              text("Cerchi con arco in senso antiorario", 15, 170);
+              //cerchi con arco in senso antiorario
+              //cerchio con arco di -30°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(45, 240, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(45, 240, 50, 50, 330, 0);
+              //testo che indica i gradi dell'arco
+              text("-30°", 33, 200);
+              //cerchio con arco di -45°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(120, 240, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(120, 240, 50, 50, 315, 0);
+              //testo che indica i gradi dell'arco
+              text("-45°", 109, 200);
+              //cerchio con arco di -60°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(195, 240, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(195, 240, 50, 50, 300, 0);
+              //testo che indica i gradi dell'arco
+              text("-60°", 185, 200);
+              //cerchio con arco di -90°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(270, 240, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(270, 240, 50, 50, 270, 0);
+              //testo che indica i gradi dell'arco
+              text("-90°", 258, 200);
+              //cerchio con arco di -180°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(345, 240, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(345, 240, 50, 50, 180, 0);
+              //testo che indica i gradi dell'arco
+              text("-180°", 331, 200);
+              //cerchio con arco di -270°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(420, 240, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(420, 240, 50, 50, 90, 0);
+              //testo che indica i gradi dell'arco
+              text("-270°", 404, 200);
+              //cerchio con arco di -360°
+              fill(102, 255, 0);
+              stroke(102, 255, 0);
+              strokeWeight(2);
+              circle(495, 240, 50);
+              fill(10, 10, 10);
+              stroke(10, 10, 10);
+              strokeWeight(1);
+              arc(495, 240, 50, 50, 360, 0);
+              //testo che indica i gradi dell'arco
+              text("-360°", 480, 200);
+            }
+            </script>
+        </body>
+    </html>
