@@ -1,1 +1,2 @@
 # Walcker003.github.io
+[![Validate HTML](https://github.com/Walcker003/Walcker003.github.io/actions/workflows/html-validate.yml/badge.svg)](https://github.com/Walcker003/Walcker003.github.io/actions/workflows/html-validate.yml)
