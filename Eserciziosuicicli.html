@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Menù del pong</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    let Y = 0;
+
+    function setup() {
+      createCanvas(800, 400);
+    }
+
+    function draw() {
+      background(0, 0, 0);
+      fill(255, 254, 239);
+      //cerchi fatti manualmente
+      circle(25, 25, 50);
+      circle(25, 75, 50);
+      circle(25, 125, 50);
+      circle(25, 175, 50);
+      //...
+      circle(25, 375, 50);
+
+      //istruzione iniziale  Y=25
+      //istruzione finale:  Y<=375
+      //istruzione di incremento:  Y=Y+50
+      //blocco istruzione generico:  circle(25,Y,50);
+      //cerchi con il for
+      fill(255, 0, 0);
+      for (Y = 25; Y <= 375; Y = Y + 50) {
+        circle(75, Y, 50);
+      }
+      //cerchi con il do-while
+      fill(0, 255, 0);
+      Y = 25;
+      do {
+        circle(125, Y, 50);
+        Y = Y + 50;
+      } while (Y <= 375);
+      //cerchi con il while
+      Y = 25;
+      fill(0, 0, 255);
+      while (Y <= 375) {
+        fill(0, 0, Y / 2);
+        circle(175, Y, 50);
+        Y = Y + 50;
+      }
+    }
+  </script>
+</body>
